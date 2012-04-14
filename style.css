@@ -1,0 +1,66 @@
+/**************************************************************************************************\
+*
+* vim: ts=3 sw=3 et wrap co=100 go-=b
+*
+* Filename: "style.css"
+*
+* Project: tomcdonnell.net
+*
+* Purpose:  Styles for the Color Spectrum Art page.
+*
+* Author: Tom McDonnell 2009-11-03
+*
+\**************************************************************************************************/
+
+*
+{
+}
+
+a.backLink,
+a.navLink
+{
+   font-size: small;
+}
+
+pre
+{
+   display: inline;
+   float: left;
+   margin-left: 25px;
+}
+
+span.webring
+{
+   float: right;
+   background: red;
+   font-size: x-small;
+}
+
+table, thead, tbody, tr, th, td
+{
+   border: 0;
+   padding: 0;
+}
+
+table
+{
+   border-collapse: collapse;
+   border-style: solid;
+   border-width: 1px;
+   border-color: black;
+}
+
+table > tbody > tr > td
+{
+   width: 50px;
+   height: 50px;
+}
+
+img
+{
+   border-style: solid;
+   border-width: 1px;
+   border-color: black;
+}
+
+/*******************************************END*OF*FILE********************************************/
