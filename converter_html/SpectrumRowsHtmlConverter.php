@@ -15,7 +15,7 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_validator.php';
+require_once dirname(__FILE__) . '/../lib_tom/php/utils/UtilsValidator.php';
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////
 
@@ -39,8 +39,8 @@ class SpectrumRowsHtmlConverter
     */
    public static function toHtmlFromFile($dimensions, $cellDimensions, $file)
    {
-      Utils_validator::checkArray($dimensions    , array('width' => 'int', 'height' => 'int'));
-      Utils_validator::checkArray($cellDimensions, array('width' => 'int', 'height' => 'int'));
+      UtilsValidator::checkArray($dimensions    , array('width' => 'int', 'height' => 'int'));
+      UtilsValidator::checkArray($cellDimensions, array('width' => 'int', 'height' => 'int'));
 
       $html = '<table>';
 

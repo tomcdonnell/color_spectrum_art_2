@@ -15,7 +15,7 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_validator.php';
+require_once dirname(__FILE__) . '/../lib_tom/php/utils/UtilsValidator.php';
 require_once dirname(__FILE__) . '/../SpectrumGenerator.php';
 require_once dirname(__FILE__) . '/SpectrumRowsPngConverter.php';
 
@@ -23,7 +23,7 @@ require_once dirname(__FILE__) . '/SpectrumRowsPngConverter.php';
 
 try
 {
-   Utils_validator::checkArray
+   UtilsValidator::checkArray
    (
       $_GET, array
       (

@@ -15,8 +15,8 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../library/tom/php/utils/Utils_validator.php';
-require_once dirname(__FILE__) . '/../library/tom/php/utils/Utils_string.php';
+require_once dirname(__FILE__) . '/lib_tom/php/utils/UtilsValidator.php';
+require_once dirname(__FILE__) . '/lib_tom/php/utils/UtilsString.php';
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////
 
@@ -40,7 +40,7 @@ class SpectrumGenerator
     */
    public static function writeSpectrumRowsToFile($configuration, $file)
    {
-      Utils_validator::checkArray
+      UtilsValidator::checkArray
       (
          $configuration, array
          (
@@ -295,9 +295,9 @@ class SpectrumGenerator
             $b = $b + ($bNext - $b) * ($subrowNo / $n_subrows);
          }
 
-         $r = Utils_string::padNumberWithZeros((int)($r * 255), 2);
-         $g = Utils_string::padNumberWithZeros((int)($g * 255), 2);
-         $b = Utils_string::padNumberWithZeros((int)($b * 255), 2);
+         $r = UtilsString::padNumberWithZeros((int)($r * 255), 2);
+         $g = UtilsString::padNumberWithZeros((int)($g * 255), 2);
+         $b = UtilsString::padNumberWithZeros((int)($b * 255), 2);
 
          fwrite($file, $r);
          fwrite($file, $g);

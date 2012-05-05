@@ -18,8 +18,8 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_validator.php';
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_string.php';
+require_once dirname(__FILE__) . '/../lib_tom/php/utils/UtilsValidator.php';
+require_once dirname(__FILE__) . '/../lib_tom/php/utils/UtilsString.php';
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////
 
@@ -48,9 +48,9 @@ class SpectrumRowsToCircleMapper
    {
       $backgroundColor = array
       (
-         'r' => Utils_string::padNumberWithZeros($backgroundColor['r'], 2),
-         'g' => Utils_string::padNumberWithZeros($backgroundColor['g'], 2),
-         'b' => Utils_string::padNumberWithZeros($backgroundColor['b'], 2)
+         'r' => UtilsString::padNumberWithZeros($backgroundColor['r'], 2),
+         'g' => UtilsString::padNumberWithZeros($backgroundColor['g'], 2),
+         'b' => UtilsString::padNumberWithZeros($backgroundColor['b'], 2)
       );
 
       // For each row in destination image...
@@ -89,7 +89,7 @@ class SpectrumRowsToCircleMapper
       $dstR, $dstC, $srcDimensions, $maxRadius
    )
    {
-      Utils_validator::checkArray($srcDimensions, array('width' => 'int', 'height' => 'int'));
+      UtilsValidator::checkArray($srcDimensions, array('width' => 'int', 'height' => 'int'));
 
       $rDstOrigin = $dstR - $maxRadius;
       $cDstOrigin = $dstC - $maxRadius;

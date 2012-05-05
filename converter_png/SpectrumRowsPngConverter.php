@@ -15,7 +15,7 @@
 
 // Includes. ///////////////////////////////////////////////////////////////////////////////////////
 
-require_once dirname(__FILE__) . '/../../library/tom/php/utils/Utils_validator.php';
+require_once dirname(__FILE__) . '/../lib_tom/php/utils/UtilsValidator.php';
 require_once dirname(__FILE__) . '/../mapper_circle/SpectrumRowsToCircleMapper.php';
 
 // Class definition. ///////////////////////////////////////////////////////////////////////////////
@@ -40,8 +40,8 @@ class SpectrumRowsPngConverter
     */
    public static function toPngFromFile($dimensions, $cellDimensions, $file)
    {
-      Utils_validator::checkArray($dimensions    , array('width' => 'int', 'height' => 'int'));
-      Utils_validator::checkArray($cellDimensions, array('width' => 'int', 'height' => 'int'));
+      UtilsValidator::checkArray($dimensions    , array('width' => 'int', 'height' => 'int'));
+      UtilsValidator::checkArray($cellDimensions, array('width' => 'int', 'height' => 'int'));
 
       $cellWidth  = $cellDimensions['width' ];
       $cellHeight = $cellDimensions['height'];
